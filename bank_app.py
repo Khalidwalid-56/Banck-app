@@ -24,13 +24,13 @@ st.title("🏦 Full Bank Management App (with Transfers & Fraud Detection)")
 
 # --- Sidebar Navigation ---
 menu = st.sidebar.radio("📋 Sections", [
-    "🏠 Home",
-    "🧾 Create Account",
-    "💰 Account Operations",
-    "📜 All Accounts",
-    "🔍 Search Account",
-    "📆 Transaction Report",
-    "⚙️ Manage Accounts"
+    " Home",
+    " Create Account",
+    " Account Operations",
+    " All Accounts",
+    " Search Account",
+    " Transaction Report",
+    " Manage Accounts"
 ])
 
 # --- Home ---
