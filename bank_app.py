@@ -34,13 +34,13 @@ menu = st.sidebar.radio("📋 Sections", [
 ])
 
 # --- Home ---
-if menu == "🏠 Home":
+if menu == " Home":
     st.subheader("Welcome to the Bank App!")
     st.write("Use the sidebar to navigate between features.")
     st.image("https://cdn-icons-png.flaticon.com/512/2331/2331970.png", width=150)
 
 # --- Create New Account ---
-elif menu == "🧾 Create Account":
+elif menu == " Create Account":
     st.header("Create New Account")
     name = st.text_input("Customer Name")
     acc_number = st.text_input("Account Number")
@@ -56,7 +56,7 @@ elif menu == "🧾 Create Account":
             st.success(f"✅ Account {acc_number} for {name} created successfully!")
 
 # --- Account Operations ---
-elif menu == "💰 Account Operations":
+elif menu == " Account Operations":
     st.header("Account Operations")
     c.execute("SELECT acc_number FROM accounts")
     all_accounts = [row[0] for row in c.fetchall()]
@@ -141,7 +141,7 @@ elif menu == "💰 Account Operations":
             st.write("No transactions yet.")
 
 # --- All Accounts ---
-elif menu == "📜 All Accounts":
+elif menu == " All Accounts":
     st.header("All Bank Accounts")
     c.execute("SELECT * FROM accounts")
     data = c.fetchall()
@@ -152,7 +152,7 @@ elif menu == "📜 All Accounts":
         st.info("No accounts available yet.")
 
 # --- Search Account ---
-elif menu == "🔍 Search Account":
+elif menu == " Search Account":
     st.header("Search for an Account")
     keyword = st.text_input("Enter account number or name:")
     if st.button("Search"):
@@ -165,7 +165,7 @@ elif menu == "🔍 Search Account":
             st.warning("No matching accounts found.")
 
 # --- Transaction Report ---
-elif menu == "📆 Transaction Report":
+elif menu == " Transaction Report":
     st.header("Transaction Report by Date Range")
     start_date = st.date_input("From", datetime.date(2024, 1, 1))
     end_date = st.date_input("To", datetime.date.today())
@@ -178,7 +178,7 @@ elif menu == "📆 Transaction Report":
         st.info("No transactions found in this range.")
 
 # --- Manage Accounts ---
-elif menu == "⚙️ Manage Accounts":
+elif menu == " Manage Accounts":
     st.header("Manage Accounts")
     c.execute("SELECT acc_number, name FROM accounts")
     accs = c.fetchall()
